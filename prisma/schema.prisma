@@ -1,0 +1,18 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model VaultProfile {
+  id            String       @id @default(cuid())
+  ownerAlias    String
+  encryptedVpa  String
+  iv            String
+  authTag       String
+  secretPinHash String
+  createdAt     DateTime     @default(now())
+}
