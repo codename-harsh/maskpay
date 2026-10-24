@@ -1,12 +1,41 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, QrCode, Terminal } from "lucide-react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MaskPay — Ephemeral UPI Shield & 1-Hour Rotating QR Engine",
-  description:
-    "Protect your personal mobile number and banking identity with auto-expiring 1-hour Masked UPI QR codes and AES-256 Vaults.",
+  metadataBase: new URL("https://maskpay-umber.vercel.app"),
+  title: {
+    default: "MaskPay — Dynamic UPI Privacy Studio & QR Pass Generator",
+    template: "%s | MaskPay",
+  },
+  description:
+    "MaskPay (maskpay-umber) by Harshvardhan Singh (@codenameharsh07) — Mint auto-expiring UPI QR passes, split group bills, and manage UPI personas privately.",
+  keywords: [
+    "MaskPay",
+    "maskpay umber",
+    "maskpay vercel",
+    "UPI privacy studio",
+    "dynamic UPI QR generator",
+    "Harshvardhan Singh",
+    "codenameharsh07",
+    "codename-harsh",
+  ],
+  authors: [{ name: "Harshvardhan Singh", url: "https://github.com/codename-harsh" }],
+  openGraph: {
+    title: "MaskPay — Dynamic UPI Privacy Studio",
+    description: "Mint auto-expiring, amount-locked UPI QR passes & split bills in seconds.",
+    url: "https://maskpay-umber.vercel.app",
+    siteName: "MaskPay",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  verification: {
+    google: "2tEmVJeRT8ffTNPx3N0CaLb5FJaZHJkMWTGxQZLywCY",
+  },
 };
 
 export default function RootLayout({
